@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 서비스 URL 모음</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">AI</span>
+          <div>
+            <h1>AI 서비스 URL 모음</h1>
+            <p>주요 AI 서비스를 카테고리별로 빠르게 찾아가는 링크 보드</p>
+          </div>
+        </div>
+        <nav class="top-menu" aria-label="대 카테고리">
+          <button class="top-tab active" type="button" data-category="전체">전체</button>
+          <button class="top-tab" type="button" data-category="AI 챗봇">AI 챗봇</button>
+          <button class="top-tab" type="button" data-category="이미지/영상">이미지/영상</button>
+          <button class="top-tab" type="button" data-category="음성/음악">음성/음악</button>
+          <button class="top-tab" type="button" data-category="개발/코딩">개발/코딩</button>
+          <button class="top-tab" type="button" data-category="배포/호스팅">배포/호스팅</button>
+          <button class="top-tab" type="button" data-category="Git/저장소">Git/저장소</button>
+          <button class="top-tab" type="button" data-category="데이터/백엔드">데이터/백엔드</button>
+          <button class="top-tab" type="button" data-category="플랫폼/리서치">플랫폼/리서치</button>
+          <button class="top-tab" type="button" data-category="생산성">생산성</button>
+        </nav>
+      </header>
+
+      <main class="layout">
+        <aside class="sidebar" aria-label="소 카테고리">
+          <div class="sidebar-title">소 카테고리</div>
+          <button class="side-item active" type="button" data-subcategory="전체">전체 보기</button>
+          <button class="side-item" type="button" data-subcategory="대화형 AI">대화형 AI</button>
+          <button class="side-item" type="button" data-subcategory="검색/리서치">검색/리서치</button>
+          <button class="side-item" type="button" data-subcategory="이미지 생성/편집">이미지 생성/편집</button>
+          <button class="side-item" type="button" data-subcategory="영상 생성">영상 생성</button>
+          <button class="side-item" type="button" data-subcategory="음악/음성">음악/음성</button>
+          <button class="side-item" type="button" data-subcategory="앱/웹 빌더">앱/웹 빌더</button>
+          <button class="side-item" type="button" data-subcategory="AI 코드 에디터">AI 코드 에디터</button>
+          <button class="side-item" type="button" data-subcategory="코드/저장소">코드/저장소</button>
+          <button class="side-item" type="button" data-subcategory="배포/호스팅">배포/호스팅</button>
+          <button class="side-item" type="button" data-subcategory="DB/백엔드">DB/백엔드</button>
+          <button class="side-item" type="button" data-subcategory="API/테스트">API/테스트</button>
+          <button class="side-item" type="button" data-subcategory="모델 허브">모델 허브</button>
+          <button class="side-item" type="button" data-subcategory="업무 생산성">업무 생산성</button>
+        </aside>
+
+        <section class="content" aria-live="polite">
+          <div class="content-head">
+            <div>
+              <p class="eyebrow">Curated Directory</p>
+              <h2 id="view-title">전체 AI 서비스</h2>
+            </div>
+            <div class="count-pill"><span id="service-count">0</span>개 서비스</div>
+          </div>
+          <div class="card-grid" id="service-grid"></div>
+          <p class="empty-state" id="empty-state" hidden>선택한 조건에 맞는 서비스가 없습니다.</p>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
