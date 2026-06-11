@@ -1,15 +1,13 @@
 :root {
-  --bg: #f5f7fb;
+  --bg: #f6f8fb;
   --surface: #ffffff;
-  --surface-strong: #eef3f8;
-  --line: #d8e0e8;
-  --text: #17202a;
-  --muted: #667381;
+  --surface-strong: #f1f5f9;
+  --line: #e2e8f0;
+  --text: #111827;
+  --muted: #64748b;
   --blue: #2563eb;
-  --green: #0f8f72;
-  --red: #d94c42;
-  --gold: #bd7a12;
-  --shadow: 0 18px 45px rgba(38, 54, 74, 0.12);
+  --green: #0f766e;
+  --shadow: 0 16px 42px rgba(15, 23, 42, 0.08);
 }
 
 * {
@@ -20,11 +18,10 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(245, 247, 251, 0.94)),
-    url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1800&q=80");
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+    linear-gradient(90deg, rgba(37, 99, 235, 0.05) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(15, 118, 110, 0.04) 1px, transparent 1px),
+    var(--bg);
+  background-size: 48px 48px;
   color: var(--text);
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -38,23 +35,25 @@ a {
 
 .app-shell {
   min-height: 100vh;
-  padding: 24px;
+  padding: 22px;
 }
 
 .topbar {
   position: sticky;
   top: 0;
   z-index: 10;
-  display: grid;
-  gap: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
   max-width: 1440px;
-  margin: 0 auto 20px;
-  padding: 18px;
-  border: 1px solid rgba(216, 224, 232, 0.86);
+  margin: 0 auto 16px;
+  padding: 14px;
+  border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.92);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(18px);
 }
 
 .brand {
@@ -69,7 +68,7 @@ a {
   height: 48px;
   place-items: center;
   border-radius: 8px;
-  background: var(--text);
+  background: linear-gradient(135deg, #111827, #2563eb);
   color: #fff;
   font-weight: 800;
 }
@@ -88,13 +87,14 @@ h1 {
 .brand p {
   margin-top: 5px;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .top-menu {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  justify-content: flex-end;
 }
 
 .top-tab,
@@ -112,9 +112,10 @@ h1 {
 
 .top-tab {
   min-height: 38px;
-  padding: 0 14px;
+  padding: 0 12px;
   border-radius: 8px;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 800;
 }
 
 .top-tab:hover,
@@ -131,22 +132,22 @@ h1 {
 
 .layout {
   display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 20px;
+  grid-template-columns: 230px 1fr;
+  gap: 16px;
   max-width: 1440px;
   margin: 0 auto;
 }
 
 .sidebar {
   position: sticky;
-  top: 150px;
+  top: 92px;
   align-self: start;
   display: grid;
   gap: 8px;
   padding: 16px;
-  border: 1px solid rgba(216, 224, 232, 0.86);
+  border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   box-shadow: var(--shadow);
   backdrop-filter: blur(14px);
 }
@@ -166,22 +167,64 @@ h1 {
   border-radius: 8px;
   text-align: left;
   font-weight: 700;
+  color: #334155;
 }
 
 .side-item.active {
-  border-color: rgba(15, 143, 114, 0.35);
-  background: rgba(15, 143, 114, 0.1);
-  color: #08735b;
+  border-color: rgba(37, 99, 235, 0.28);
+  background: rgba(37, 99, 235, 0.08);
+  color: #1d4ed8;
 }
 
 .content {
   min-width: 0;
-  padding: 22px;
-  border: 1px solid rgba(216, 224, 232, 0.86);
+  padding: 18px;
+  border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.94);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(18px);
+}
+
+.workflow-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.workflow-step {
+  min-height: 96px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfdff;
+}
+
+.workflow-step span {
+  display: inline-flex;
+  width: 30px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background: #e8f0ff;
+  color: #1d4ed8;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.workflow-step strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.workflow-step p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
 }
 
 .content-head {
@@ -194,7 +237,7 @@ h1 {
 
 .eyebrow {
   margin-bottom: 6px;
-  color: var(--green);
+  color: var(--blue);
   font-size: 12px;
   font-weight: 900;
   letter-spacing: 0;
@@ -213,16 +256,17 @@ h2 {
   align-items: center;
   padding: 0 12px;
   border-radius: 8px;
+  border: 1px solid var(--line);
   background: var(--surface-strong);
-  color: var(--muted);
+  color: #334155;
   font-size: 14px;
   font-weight: 800;
 }
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
 }
 
 .service-card {
@@ -230,16 +274,21 @@ h2 {
   grid-template-rows: auto 1fr auto;
   gap: 14px;
   min-height: 230px;
-  padding: 18px;
+  padding: 16px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
-  box-shadow: 0 10px 25px rgba(38, 54, 74, 0.08);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease,
+    transform 150ms ease;
 }
 
 .service-card:hover {
-  border-color: #b8c6d6;
-  box-shadow: 0 16px 32px rgba(38, 54, 74, 0.13);
+  transform: translateY(-2px);
+  border-color: rgba(37, 99, 235, 0.38);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.1);
 }
 
 .card-top {
@@ -251,8 +300,8 @@ h2 {
 
 .logo {
   display: inline-grid;
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   place-items: center;
   border-radius: 8px;
   background: var(--tone);
@@ -264,8 +313,9 @@ h2 {
   min-width: 0;
   padding: 5px 8px;
   border-radius: 8px;
-  background: rgba(37, 99, 235, 0.09);
-  color: #1f55c4;
+  border: 1px solid rgba(37, 99, 235, 0.14);
+  background: rgba(37, 99, 235, 0.07);
+  color: #1d4ed8;
   font-size: 12px;
   font-weight: 800;
 }
@@ -331,7 +381,7 @@ h2 {
   justify-content: center;
   gap: 8px;
   border-radius: 8px;
-  background: var(--text);
+  background: #111827;
   color: #fff;
   font-weight: 800;
   text-decoration: none;
@@ -358,8 +408,21 @@ h2 {
     position: static;
   }
 
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .top-menu {
+    justify-content: flex-start;
+  }
+
   .layout {
     grid-template-columns: 1fr;
+  }
+
+  .workflow-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .sidebar {
@@ -400,6 +463,10 @@ h2 {
   }
 
   .sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-strip {
     grid-template-columns: 1fr;
   }
 

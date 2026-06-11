@@ -341,7 +341,42 @@ const emptyState = document.querySelector("#empty-state");
 const topTabs = document.querySelectorAll(".top-tab");
 const sideItems = document.querySelectorAll(".side-item");
 
-let activeCategory = "전체";
+const workflows = {
+  전체: {
+    title: "전체 워크플로우",
+    match: () => true,
+  },
+  "아이디어/리서치": {
+    title: "아이디어와 리서치",
+    match: (service) =>
+      ["AI 챗봇", "플랫폼/리서치", "생산성"].includes(service.category) ||
+      ["대화형 AI", "검색/리서치", "모델 허브"].includes(service.subcategory),
+  },
+  "콘텐츠 생성": {
+    title: "콘텐츠 생성",
+    match: (service) =>
+      ["이미지/영상", "음성/음악"].includes(service.category) ||
+      ["이미지 생성/편집", "영상 생성", "음악/음성"].includes(service.subcategory),
+  },
+  "코딩/빌드": {
+    title: "코딩과 빌드",
+    match: (service) =>
+      service.category === "개발/코딩" ||
+      ["앱/웹 빌더", "AI 코드 에디터", "API/테스트"].includes(service.subcategory),
+  },
+  "저장소/협업": {
+    title: "저장소와 협업",
+    match: (service) => service.category === "Git/저장소" || service.subcategory === "코드/저장소",
+  },
+  "배포/운영": {
+    title: "배포와 운영",
+    match: (service) =>
+      ["배포/호스팅", "데이터/백엔드"].includes(service.category) ||
+      ["배포/호스팅", "DB/백엔드", "API/테스트"].includes(service.subcategory),
+  },
+};
+
+let activeWorkflow = "전체";
 let activeSubcategory = "전체";
 
 function getInitials(name) {
@@ -359,10 +394,10 @@ function getHost(url) {
 
 function render() {
   const filtered = services.filter((service) => {
-    const categoryMatch = activeCategory === "전체" || service.category === activeCategory;
+    const workflowMatch = workflows[activeWorkflow].match(service);
     const subcategoryMatch =
       activeSubcategory === "전체" || service.subcategory === activeSubcategory;
-    return categoryMatch && subcategoryMatch;
+    return workflowMatch && subcategoryMatch;
   });
 
   grid.innerHTML = filtered
@@ -398,20 +433,20 @@ function render() {
   count.textContent = filtered.length;
   emptyState.hidden = filtered.length > 0;
 
-  if (activeCategory === "전체" && activeSubcategory === "전체") {
-    title.textContent = "전체 AI 서비스";
+  if (activeWorkflow === "전체" && activeSubcategory === "전체") {
+    title.textContent = workflows[activeWorkflow].title;
   } else if (activeSubcategory === "전체") {
-    title.textContent = activeCategory;
-  } else if (activeCategory === "전체") {
+    title.textContent = workflows[activeWorkflow].title;
+  } else if (activeWorkflow === "전체") {
     title.textContent = activeSubcategory;
   } else {
-    title.textContent = `${activeCategory} · ${activeSubcategory}`;
+    title.textContent = `${workflows[activeWorkflow].title} · ${activeSubcategory}`;
   }
 }
 
 topTabs.forEach((button) => {
   button.addEventListener("click", () => {
-    activeCategory = button.dataset.category;
+    activeWorkflow = button.dataset.workflow;
     topTabs.forEach((tab) => tab.classList.toggle("active", tab === button));
     render();
   });
