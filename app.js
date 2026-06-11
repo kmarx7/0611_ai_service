@@ -332,6 +332,195 @@ const services = [
     tags: ["이미지", "타이포", "로고"],
     tone: "#c026d3",
   },
+  {
+    name: "Mobbin",
+    url: "https://mobbin.com",
+    category: "디자인/UX",
+    subcategory: "디자인 레퍼런스",
+    summary: "실제 모바일 앱과 웹 서비스의 화면, UI 패턴, 사용자 플로우를 찾는 레퍼런스 라이브러리.",
+    tags: ["UI 패턴", "앱 화면", "플로우"],
+    tone: "#111827",
+  },
+  {
+    name: "Awwwards",
+    url: "https://www.awwwards.com",
+    category: "디자인/UX",
+    subcategory: "디자인 레퍼런스",
+    summary: "수준 높은 웹디자인, 인터랙션, 랜딩페이지 사례를 탐색하는 글로벌 웹 어워드 플랫폼.",
+    tags: ["웹디자인", "인터랙션", "레퍼런스"],
+    tone: "#121212",
+  },
+  {
+    name: "Figma Community",
+    url: "https://www.figma.com/community",
+    category: "디자인/UX",
+    subcategory: "디자인 시스템",
+    summary: "UI 키트, 디자인 시스템, 템플릿, 플러그인을 찾아 바로 복제해 쓰는 Figma 자료실.",
+    tags: ["UI Kit", "템플릿", "Figma"],
+    tone: "#a259ff",
+  },
+  {
+    name: "shadcn/ui",
+    url: "https://ui.shadcn.com",
+    category: "디자인/UX",
+    subcategory: "디자인 시스템",
+    summary: "복사해 프로젝트에 소유권을 두고 커스터마이즈하는 React 컴포넌트 기반 디자인 시스템.",
+    tags: ["React", "컴포넌트", "Tailwind"],
+    tone: "#09090b",
+  },
+  {
+    name: "Relume",
+    url: "https://www.relume.io",
+    category: "디자인/UX",
+    subcategory: "디자인 시스템",
+    summary: "AI로 사이트맵, 와이어프레임, 스타일가이드를 빠르게 만들고 Figma나 React로 이어주는 도구.",
+    tags: ["와이어프레임", "사이트맵", "AI"],
+    tone: "#2563eb",
+  },
+  {
+    name: "Lucide",
+    url: "https://lucide.dev",
+    category: "디자인/UX",
+    subcategory: "아이콘/에셋",
+    summary: "웹앱과 대시보드에 쓰기 좋은 일관된 선형 오픈소스 아이콘 세트.",
+    tags: ["아이콘", "SVG", "오픈소스"],
+    tone: "#f56565",
+  },
+  {
+    name: "Realtime Colors",
+    url: "https://www.realtimecolors.com",
+    category: "디자인/UX",
+    subcategory: "색상/폰트",
+    summary: "텍스트, 배경, 강조색 조합을 실제 UI 화면에서 바로 확인하는 컬러 팔레트 도구.",
+    tags: ["컬러", "팔레트", "접근성"],
+    tone: "#7c3aed",
+  },
+  {
+    name: "Google Fonts",
+    url: "https://fonts.google.com",
+    category: "디자인/UX",
+    subcategory: "색상/폰트",
+    summary: "웹 프로젝트에 바로 적용하기 좋은 무료 폰트를 검색하고 조합하는 공식 폰트 라이브러리.",
+    tags: ["폰트", "타이포", "웹폰트"],
+    tone: "#4285f4",
+  },
+  {
+    name: "Unsplash",
+    url: "https://unsplash.com",
+    category: "디자인/UX",
+    subcategory: "아이콘/에셋",
+    summary: "랜딩페이지, 블로그, 목업에 사용할 고품질 사진을 찾는 이미지 라이브러리.",
+    tags: ["사진", "이미지", "비주얼"],
+    tone: "#000000",
+  },
+  {
+    name: "Spline",
+    url: "https://spline.design",
+    category: "디자인/UX",
+    subcategory: "아이콘/에셋",
+    summary: "웹에서 사용할 3D 오브젝트와 인터랙티브 씬을 제작하는 디자인 도구.",
+    tags: ["3D", "인터랙션", "웹"],
+    tone: "#7057ff",
+  },
+  {
+    name: "Freebuff",
+    url: "https://freebuff.com",
+    category: "개발/코딩",
+    subcategory: "AI 코딩 에이전트",
+    summary: "구독 없이 설치해 쓰는 무료 터미널 기반 AI 코딩 에이전트.",
+    tags: ["CLI", "무료", "서브에이전트"],
+    tone: "#111827",
+  },
+  {
+    name: "Codebuff",
+    url: "https://www.codebuff.com",
+    category: "개발/코딩",
+    subcategory: "AI 코딩 에이전트",
+    summary: "자연어 지시로 코드베이스를 이해하고 여러 에이전트가 협업해 코드를 수정하는 오픈소스 코딩 어시스턴트.",
+    tags: ["오픈소스", "멀티에이전트", "CLI"],
+    tone: "#2563eb",
+  },
+  {
+    name: "Claude Code",
+    url: "https://code.claude.com",
+    category: "개발/코딩",
+    subcategory: "AI 코딩 에이전트",
+    summary: "코드베이스를 읽고 파일 수정, 명령 실행, Git 작업까지 처리하는 Anthropic의 에이전트형 코딩 도구.",
+    tags: ["Claude", "CLI", "에이전트"],
+    tone: "#6f5a48",
+  },
+  {
+    name: "OpenAI Codex",
+    url: "https://developers.openai.com/codex",
+    category: "개발/코딩",
+    subcategory: "AI 코딩 에이전트",
+    summary: "코드 생성, 수정, 자동화 작업을 위한 OpenAI의 소프트웨어 엔지니어링 에이전트 제품군.",
+    tags: ["OpenAI", "Codex", "자동화"],
+    tone: "#10a37f",
+  },
+  {
+    name: "Gemini CLI",
+    url: "https://github.com/google-gemini/gemini-cli",
+    category: "개발/코딩",
+    subcategory: "AI 코딩 에이전트",
+    summary: "Gemini를 터미널에서 사용하는 Google의 오픈소스 AI 에이전트 CLI.",
+    tags: ["Google", "Gemini", "CLI"],
+    tone: "#4285f4",
+  },
+  {
+    name: "OpenCode",
+    url: "https://opencode.ai",
+    category: "개발/코딩",
+    subcategory: "AI 코딩 에이전트",
+    summary: "터미널 중심으로 동작하는 오픈소스 AI 코딩 에이전트.",
+    tags: ["오픈소스", "CLI", "코딩"],
+    tone: "#111827",
+  },
+  {
+    name: "Aider",
+    url: "https://aider.chat",
+    category: "개발/코딩",
+    subcategory: "AI 코딩 에이전트",
+    summary: "Git 저장소 안에서 대화하며 코드를 수정하고 커밋 흐름까지 돕는 터미널 AI 페어 프로그래밍 도구.",
+    tags: ["터미널", "Git", "페어코딩"],
+    tone: "#16a34a",
+  },
+  {
+    name: "Cline",
+    url: "https://cline.bot",
+    category: "개발/코딩",
+    subcategory: "AI 코딩 에이전트",
+    summary: "VS Code 안에서 파일 수정, 명령 실행, 브라우저 작업까지 처리하는 오픈소스 AI 코딩 에이전트.",
+    tags: ["VS Code", "오픈소스", "브라우저"],
+    tone: "#7c3aed",
+  },
+  {
+    name: "Continue",
+    url: "https://www.continue.dev",
+    category: "개발/코딩",
+    subcategory: "AI 코딩 에이전트",
+    summary: "팀이 자체 모델과 규칙을 연결해 코드 자동완성, 채팅, 에이전트 흐름을 구성하는 오픈소스 AI 개발 플랫폼.",
+    tags: ["오픈소스", "팀", "커스텀"],
+    tone: "#0f766e",
+  },
+  {
+    name: "Amp",
+    url: "https://ampcode.com",
+    category: "개발/코딩",
+    subcategory: "AI 코딩 에이전트",
+    summary: "터미널, 웹, 모바일에서 이어서 사용할 수 있는 Sourcegraph 계열의 에이전트형 코딩 도구.",
+    tags: ["CLI", "원격제어", "에이전트"],
+    tone: "#f97316",
+  },
+  {
+    name: "Devin",
+    url: "https://devin.ai",
+    category: "개발/코딩",
+    subcategory: "AI 코딩 에이전트",
+    summary: "코드 마이그레이션, 버그 수정, PR 리뷰 같은 엔지니어링 작업을 위임하는 자율형 AI 소프트웨어 엔지니어.",
+    tags: ["자율 에이전트", "PR 리뷰", "마이그레이션"],
+    tone: "#111827",
+  },
 ];
 
 const grid = document.querySelector("#service-grid");
@@ -340,6 +529,17 @@ const title = document.querySelector("#view-title");
 const emptyState = document.querySelector("#empty-state");
 const topTabs = document.querySelectorAll(".top-tab");
 const sideItems = document.querySelectorAll(".side-item");
+const serviceSearch = document.querySelector("#service-search");
+const searchClear = document.querySelector("#search-clear");
+const insightToggle = document.querySelector("#insight-toggle");
+const insightBoard = document.querySelector("#insight-board");
+const todayVisits = document.querySelector("#today-visits");
+const totalVisits = document.querySelector("#total-visits");
+const favoriteTotal = document.querySelector("#favorite-total");
+const todayClickTotal = document.querySelector("#today-click-total");
+const todayPopularList = document.querySelector("#today-popular-list");
+const recentList = document.querySelector("#recent-list");
+const categoryStats = document.querySelector("#category-stats");
 
 const workflows = {
   전체: {
@@ -352,6 +552,14 @@ const workflows = {
       ["AI 챗봇", "플랫폼/리서치", "생산성"].includes(service.category) ||
       ["대화형 AI", "검색/리서치", "모델 허브"].includes(service.subcategory),
   },
+  "디자인/UX": {
+    title: "디자인과 UX",
+    match: (service) =>
+      service.category === "디자인/UX" ||
+      ["디자인 레퍼런스", "디자인 시스템", "아이콘/에셋", "색상/폰트"].includes(
+        service.subcategory,
+      ),
+  },
   "콘텐츠 생성": {
     title: "콘텐츠 생성",
     match: (service) =>
@@ -362,7 +570,9 @@ const workflows = {
     title: "코딩과 빌드",
     match: (service) =>
       service.category === "개발/코딩" ||
-      ["앱/웹 빌더", "AI 코드 에디터", "API/테스트"].includes(service.subcategory),
+      ["앱/웹 빌더", "AI 코드 에디터", "AI 코딩 에이전트", "API/테스트"].includes(
+        service.subcategory,
+      ),
   },
   "저장소/협업": {
     title: "저장소와 협업",
@@ -378,6 +588,46 @@ const workflows = {
 
 let activeWorkflow = "전체";
 let activeSubcategory = "전체";
+let searchTerm = "";
+
+const hangulInitials = [
+  "ㄱ",
+  "ㄲ",
+  "ㄴ",
+  "ㄷ",
+  "ㄸ",
+  "ㄹ",
+  "ㅁ",
+  "ㅂ",
+  "ㅃ",
+  "ㅅ",
+  "ㅆ",
+  "ㅇ",
+  "ㅈ",
+  "ㅉ",
+  "ㅊ",
+  "ㅋ",
+  "ㅌ",
+  "ㅍ",
+  "ㅎ",
+];
+
+const storageKey = "vibeCodingServiceStats";
+const insightVisibilityKey = "vibeCodingInsightVisible";
+const todayKey = getTodayKey();
+const defaultStats = {
+  visits: {
+    total: 0,
+    byDate: {},
+  },
+  clicks: {},
+  favorites: [],
+  recent: [],
+};
+
+const stats = loadStats();
+recordPageVisit();
+setInsightVisibility(localStorage.getItem(insightVisibilityKey) === "true");
 
 function getInitials(name) {
   return name
@@ -392,12 +642,239 @@ function getHost(url) {
   return new URL(url).host.replace(/^www\./, "");
 }
 
+function normalizeSearchText(value) {
+  return value.toString().normalize("NFC").toLowerCase();
+}
+
+function getHangulInitials(value) {
+  return Array.from(value)
+    .map((char) => {
+      const code = char.charCodeAt(0) - 44032;
+      if (code < 0 || code > 11171) {
+        return char;
+      }
+      return hangulInitials[Math.floor(code / 588)];
+    })
+    .join("");
+}
+
+function matchesSearch(service) {
+  if (!searchTerm) {
+    return true;
+  }
+
+  const searchableText = [
+    service.name,
+    service.url,
+    service.category,
+    service.subcategory,
+    service.summary,
+    ...service.tags,
+  ]
+    .join(" ");
+  const haystack = normalizeSearchText(searchableText);
+  const initialHaystack = getHangulInitials(haystack);
+
+  return haystack.includes(searchTerm) || initialHaystack.includes(searchTerm);
+}
+
+function getTodayKey() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const date = String(now.getDate()).padStart(2, "0");
+  return `${year}-${month}-${date}`;
+}
+
+function loadStats() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(storageKey));
+    return {
+      ...defaultStats,
+      ...parsed,
+      visits: {
+        ...defaultStats.visits,
+        ...parsed?.visits,
+        byDate: parsed?.visits?.byDate || {},
+      },
+      clicks: parsed?.clicks || {},
+      favorites: parsed?.favorites || [],
+      recent: parsed?.recent || [],
+    };
+  } catch {
+    return structuredClone(defaultStats);
+  }
+}
+
+function saveStats() {
+  localStorage.setItem(storageKey, JSON.stringify(stats));
+}
+
+function setInsightVisibility(isVisible) {
+  insightBoard.hidden = !isVisible;
+  insightToggle.textContent = isVisible ? "통계 숨기기" : "통계 보기";
+  insightToggle.setAttribute("aria-expanded", isVisible.toString());
+  localStorage.setItem(insightVisibilityKey, isVisible.toString());
+}
+
+function getService(name) {
+  return services.find((service) => service.name === name);
+}
+
+function getServiceClicks(name) {
+  return stats.clicks[name] || { total: 0, byDate: {} };
+}
+
+function getTodayClicks(name) {
+  return getServiceClicks(name).byDate[todayKey] || 0;
+}
+
+function isFavorite(name) {
+  return stats.favorites.includes(name);
+}
+
+function recordPageVisit() {
+  stats.visits.total += 1;
+  stats.visits.byDate[todayKey] = (stats.visits.byDate[todayKey] || 0) + 1;
+  saveStats();
+}
+
+function recordServiceClick(name) {
+  const serviceClicks = getServiceClicks(name);
+  serviceClicks.total += 1;
+  serviceClicks.byDate[todayKey] = (serviceClicks.byDate[todayKey] || 0) + 1;
+  stats.clicks[name] = serviceClicks;
+  stats.recent = [name, ...stats.recent.filter((item) => item !== name)].slice(0, 5);
+  saveStats();
+  render();
+}
+
+function toggleFavorite(name) {
+  if (isFavorite(name)) {
+    stats.favorites = stats.favorites.filter((item) => item !== name);
+  } else {
+    stats.favorites = [name, ...stats.favorites];
+  }
+  saveStats();
+  render();
+}
+
+function getTopTodayServices() {
+  return services
+    .map((service) => ({
+      ...service,
+      todayClicks: getTodayClicks(service.name),
+    }))
+    .filter((service) => service.todayClicks > 0)
+    .sort((a, b) => b.todayClicks - a.todayClicks || a.name.localeCompare(b.name))
+    .slice(0, 5);
+}
+
+function getTopTotalServices() {
+  return services
+    .map((service) => ({
+      ...service,
+      totalClicks: getServiceClicks(service.name).total,
+    }))
+    .filter((service) => service.totalClicks > 0)
+    .sort((a, b) => b.totalClicks - a.totalClicks || a.name.localeCompare(b.name))
+    .slice(0, 5);
+}
+
+function getCategoryUsage() {
+  const totals = services.reduce((acc, service) => {
+    const clicks = getServiceClicks(service.name).total;
+    acc[service.category] = (acc[service.category] || 0) + clicks;
+    return acc;
+  }, {});
+  const totalClicks = Object.values(totals).reduce((sum, value) => sum + value, 0);
+
+  if (totalClicks === 0) {
+    const serviceCounts = services.reduce((acc, service) => {
+      acc[service.category] = (acc[service.category] || 0) + 1;
+      return acc;
+    }, {});
+    const totalServices = services.length;
+    return Object.entries(serviceCounts)
+      .map(([category, value]) => ({
+        category,
+        value,
+        percent: Math.round((value / totalServices) * 100),
+        unit: "개",
+      }))
+      .sort((a, b) => b.value - a.value)
+      .slice(0, 4);
+  }
+
+  return Object.entries(totals)
+    .map(([category, value]) => ({
+      category,
+      value,
+      percent: Math.round((value / totalClicks) * 100),
+      unit: "회",
+    }))
+    .sort((a, b) => b.value - a.value)
+    .slice(0, 4);
+}
+
+function renderInsights() {
+  const topToday = getTopTodayServices();
+  const fallbackTop = getTopTotalServices();
+  const totalTodayClicks = services.reduce((sum, service) => sum + getTodayClicks(service.name), 0);
+
+  todayVisits.textContent = stats.visits.byDate[todayKey] || 0;
+  totalVisits.textContent = stats.visits.total;
+  favoriteTotal.textContent = stats.favorites.length;
+  todayClickTotal.textContent = `${totalTodayClicks} 클릭`;
+
+  const popularItems = (topToday.length > 0 ? topToday : fallbackTop).slice(0, 3);
+  todayPopularList.innerHTML =
+    popularItems.length > 0
+      ? popularItems
+          .map(
+            (service, index) => `
+              <li class="rank-item">
+                <span class="rank-index">${index + 1}</span>
+                <span class="rank-name">${service.name}</span>
+                <span class="rank-count">${topToday.length > 0 ? service.todayClicks : service.totalClicks}회</span>
+              </li>
+            `,
+          )
+          .join("")
+      : `<li class="empty-mini">아직 클릭 기록이 없습니다.</li>`;
+
+  recentList.innerHTML =
+    stats.recent.length > 0
+      ? stats.recent
+          .slice(0, 3)
+          .map((name) => {
+            const service = getService(name);
+            return service ? `<div class="recent-item">${service.name}</div>` : "";
+          })
+          .join("")
+      : `<div class="empty-mini">사이트를 열면 최근 방문에 표시됩니다.</div>`;
+
+  categoryStats.innerHTML = getCategoryUsage()
+    .map(
+      (item) => `
+        <div class="category-stat">
+          <div class="category-stat-top">
+            <span>${item.category}</span>
+            <span>${item.value}${item.unit} · ${item.percent}%</span>
+          </div>
+          <div class="stat-bar"><span class="stat-fill" style="--value: ${item.percent}%"></span></div>
+        </div>
+      `,
+    )
+    .join("");
+}
+
 function render() {
   const filtered = services.filter((service) => {
     const workflowMatch = workflows[activeWorkflow].match(service);
     const subcategoryMatch =
       activeSubcategory === "전체" || service.subcategory === activeSubcategory;
-    return workflowMatch && subcategoryMatch;
+    return workflowMatch && subcategoryMatch && matchesSearch(service);
   });
 
   grid.innerHTML = filtered
@@ -406,7 +883,12 @@ function render() {
         <article class="service-card">
           <div class="card-top">
             <span class="logo" style="--tone: ${service.tone}">${getInitials(service.name)}</span>
-            <span class="badge">${service.category}</span>
+            <div class="card-actions">
+              <span class="badge">${service.category}</span>
+              <button class="favorite-button ${isFavorite(service.name) ? "active" : ""}" type="button" data-favorite="${service.name}" aria-label="${service.name} 즐겨찾기">
+                ${isFavorite(service.name) ? "★" : "☆"}
+              </button>
+            </div>
           </div>
           <div>
             <h3>${service.name}</h3>
@@ -417,12 +899,17 @@ function render() {
               <span>URL</span>
               <strong>${getHost(service.url)}</strong>
             </div>
+            <div class="card-stats">
+              <span class="stat-chip">오늘 ${getTodayClicks(service.name)}회</span>
+              <span class="stat-chip">전체 ${getServiceClicks(service.name).total}회</span>
+              ${isFavorite(service.name) ? `<span class="stat-chip">저장됨</span>` : ""}
+            </div>
             <div class="card-meta">
               <span class="chip">${service.subcategory}</span>
               ${service.tags.map((tag) => `<span class="chip">${tag}</span>`).join("")}
             </div>
           </div>
-          <a class="visit-link" href="${service.url}" target="_blank" rel="noopener noreferrer">
+          <a class="visit-link" href="${service.url}" target="_blank" rel="noopener noreferrer" data-visit="${service.name}">
             사이트 열기
           </a>
         </article>
@@ -433,7 +920,9 @@ function render() {
   count.textContent = filtered.length;
   emptyState.hidden = filtered.length > 0;
 
-  if (activeWorkflow === "전체" && activeSubcategory === "전체") {
+  if (searchTerm) {
+    title.textContent = `검색 결과: "${serviceSearch.value.trim()}"`;
+  } else if (activeWorkflow === "전체" && activeSubcategory === "전체") {
     title.textContent = workflows[activeWorkflow].title;
   } else if (activeSubcategory === "전체") {
     title.textContent = workflows[activeWorkflow].title;
@@ -442,6 +931,23 @@ function render() {
   } else {
     title.textContent = `${workflows[activeWorkflow].title} · ${activeSubcategory}`;
   }
+
+  renderInsights();
+  bindCardActions();
+}
+
+function bindCardActions() {
+  document.querySelectorAll("[data-visit]").forEach((link) => {
+    link.addEventListener("click", () => {
+      recordServiceClick(link.dataset.visit);
+    });
+  });
+
+  document.querySelectorAll("[data-favorite]").forEach((button) => {
+    button.addEventListener("click", () => {
+      toggleFavorite(button.dataset.favorite);
+    });
+  });
 }
 
 topTabs.forEach((button) => {
@@ -458,6 +964,33 @@ sideItems.forEach((button) => {
     sideItems.forEach((item) => item.classList.toggle("active", item === button));
     render();
   });
+});
+
+serviceSearch.addEventListener("input", () => {
+  searchTerm = normalizeSearchText(serviceSearch.value.trim());
+  searchClear.hidden = searchTerm.length === 0;
+  render();
+});
+
+serviceSearch.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    serviceSearch.value = "";
+    searchTerm = "";
+    searchClear.hidden = true;
+    render();
+  }
+});
+
+searchClear.addEventListener("click", () => {
+  serviceSearch.value = "";
+  searchTerm = "";
+  searchClear.hidden = true;
+  serviceSearch.focus();
+  render();
+});
+
+insightToggle.addEventListener("click", () => {
+  setInsightVisibility(insightBoard.hidden);
 });
 
 render();

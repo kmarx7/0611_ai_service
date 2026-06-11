@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>바이브 코딩 AI 스택</title>
-    <link rel="stylesheet" href="./styles.css?v=workflow-dashboard" />
+    <link rel="stylesheet" href="./styles.css?v=engagement-dashboard" />
   </head>
   <body>
     <div class="app-shell">
@@ -19,6 +19,7 @@
         <nav class="top-menu" aria-label="작업 단계">
           <button class="top-tab active" type="button" data-workflow="전체">전체</button>
           <button class="top-tab" type="button" data-workflow="아이디어/리서치">아이디어/리서치</button>
+          <button class="top-tab" type="button" data-workflow="디자인/UX">디자인/UX</button>
           <button class="top-tab" type="button" data-workflow="콘텐츠 생성">콘텐츠 생성</button>
           <button class="top-tab" type="button" data-workflow="코딩/빌드">코딩/빌드</button>
           <button class="top-tab" type="button" data-workflow="저장소/협업">저장소/협업</button>
@@ -26,17 +27,59 @@
         </nav>
       </header>
 
+      <section class="insight-shell" aria-label="사용 통계">
+        <div class="insight-board" id="insight-board" hidden>
+          <article class="insight-panel visitor-panel">
+            <p class="panel-label">방문자수</p>
+            <div class="metric-row">
+              <div>
+                <span>오늘</span>
+                <strong id="today-visits">0</strong>
+              </div>
+              <div>
+                <span>전체</span>
+                <strong id="total-visits">0</strong>
+              </div>
+              <div>
+                <span>저장</span>
+                <strong id="favorite-total">0</strong>
+              </div>
+            </div>
+          </article>
+          <article class="insight-panel">
+            <div class="panel-head">
+              <p class="panel-label">오늘의 인기 도구</p>
+              <span id="today-click-total">0 클릭</span>
+            </div>
+            <ol class="rank-list" id="today-popular-list"></ol>
+          </article>
+          <article class="insight-panel">
+            <p class="panel-label">최근 방문한 서비스</p>
+            <div class="recent-list" id="recent-list"></div>
+          </article>
+          <article class="insight-panel category-panel">
+            <p class="panel-label">카테고리별 사용 통계</p>
+            <div class="category-stats" id="category-stats"></div>
+          </article>
+        </div>
+      </section>
+
       <main class="layout">
         <aside class="sidebar" aria-label="소 카테고리">
           <div class="sidebar-title">사용 분류</div>
           <button class="side-item active" type="button" data-subcategory="전체">전체 보기</button>
           <button class="side-item" type="button" data-subcategory="대화형 AI">대화형 AI</button>
           <button class="side-item" type="button" data-subcategory="검색/리서치">검색/리서치</button>
+          <button class="side-item" type="button" data-subcategory="디자인 레퍼런스">디자인 레퍼런스</button>
+          <button class="side-item" type="button" data-subcategory="디자인 시스템">디자인 시스템</button>
+          <button class="side-item" type="button" data-subcategory="아이콘/에셋">아이콘/에셋</button>
+          <button class="side-item" type="button" data-subcategory="색상/폰트">색상/폰트</button>
           <button class="side-item" type="button" data-subcategory="이미지 생성/편집">이미지 생성/편집</button>
           <button class="side-item" type="button" data-subcategory="영상 생성">영상 생성</button>
           <button class="side-item" type="button" data-subcategory="음악/음성">음악/음성</button>
           <button class="side-item" type="button" data-subcategory="앱/웹 빌더">앱/웹 빌더</button>
           <button class="side-item" type="button" data-subcategory="AI 코드 에디터">AI 코드 에디터</button>
+          <button class="side-item" type="button" data-subcategory="AI 코딩 에이전트">AI 코딩 에이전트</button>
           <button class="side-item" type="button" data-subcategory="코드/저장소">코드/저장소</button>
           <button class="side-item" type="button" data-subcategory="배포/호스팅">배포/호스팅</button>
           <button class="side-item" type="button" data-subcategory="DB/백엔드">DB/백엔드</button>
@@ -46,34 +89,26 @@
         </aside>
 
         <section class="content" aria-live="polite">
-          <div class="workflow-strip" aria-label="바이브 코딩 워크플로우">
-            <div class="workflow-step">
-              <span>01</span>
-              <strong>리서치</strong>
-              <p>대화형 AI와 검색으로 요구사항 정리</p>
-            </div>
-            <div class="workflow-step">
-              <span>02</span>
-              <strong>생성</strong>
-              <p>이미지, 영상, 음악 소재 제작</p>
-            </div>
-            <div class="workflow-step">
-              <span>03</span>
-              <strong>빌드</strong>
-              <p>AI 에디터와 앱 빌더로 구현</p>
-            </div>
-            <div class="workflow-step">
-              <span>04</span>
-              <strong>배포</strong>
-              <p>Git 저장소, DB, 호스팅 연결</p>
-            </div>
-          </div>
           <div class="content-head">
             <div>
               <p class="eyebrow">Workflow Directory</p>
               <h2 id="view-title">전체 워크플로우</h2>
             </div>
-            <div class="count-pill"><span id="service-count">0</span>개 서비스</div>
+            <div class="content-tools">
+              <div class="search-box">
+                <input
+                  id="service-search"
+                  type="search"
+                  placeholder="사이트명, 태그, 분류 검색"
+                  autocomplete="off"
+                />
+                <button class="search-clear" id="search-clear" type="button" aria-label="검색 초기화" hidden>×</button>
+              </div>
+              <div class="count-pill"><span id="service-count">0</span>개 서비스</div>
+              <button class="insight-toggle" id="insight-toggle" type="button" aria-expanded="false">
+                통계 보기
+              </button>
+            </div>
           </div>
           <div class="card-grid" id="service-grid"></div>
           <p class="empty-state" id="empty-state" hidden>선택한 조건에 맞는 서비스가 없습니다.</p>
@@ -81,6 +116,6 @@
       </main>
     </div>
 
-    <script src="./app.js?v=workflow-dashboard"></script>
+    <script src="./app.js?v=engagement-dashboard"></script>
   </body>
 </html>
