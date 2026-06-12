@@ -51,9 +51,13 @@ const workflows = {
     title: "코딩과 빌드",
     match: (service) =>
       service.category === "개발/코딩" ||
-      ["앱/웹 빌더", "AI 코드 에디터", "AI 코딩 에이전트", "API/테스트"].includes(
-        service.subcategory,
-      ),
+      [
+        "앱/웹 빌더",
+        "AI 개발 플랫폼",
+        "AI 코드 에디터",
+        "AI 코딩 에이전트",
+        "API/테스트",
+      ].includes(service.subcategory),
   },
   "저장소/협업": {
     title: "저장소와 협업",
