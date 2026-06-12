@@ -401,6 +401,23 @@ function renderInsights() {
     .join("");
 }
 
+function getSubcategoryCount(subcategory) {
+  if (subcategory === "전체") {
+    return services.length;
+  }
+  return services.filter((service) => service.subcategory === subcategory).length;
+}
+
+function renderSidebarCounts() {
+  sideItems.forEach((button) => {
+    const label = button.dataset.label || button.textContent.trim();
+    button.dataset.label = label;
+    button.innerHTML = `<span>${escapeHtml(label)}</span><strong>${getSubcategoryCount(button.dataset.subcategory)}</strong>`;
+  });
+
+  favoriteFilter.innerHTML = `<span>즐겨찾기</span><strong>${stats.favorites.length}</strong>`;
+}
+
 function render() {
   const filtered = sortServices(services.filter((service) => {
     const workflowMatch = workflows[activeWorkflow].match(service);
@@ -418,7 +435,7 @@ function render() {
             <span class="logo" style="--tone: ${escapeHtml(service.tone)}">${getInitials(service.name)}</span>
             <div class="card-actions">
               <span class="badge">${highlightMatch(service.category)}</span>
-              <button class="favorite-button ${isFavorite(service.name) ? "active" : ""}" type="button" data-favorite="${escapeHtml(service.name)}" aria-label="${escapeHtml(service.name)} 즐겨찾기" title="${isFavorite(service.name) ? "저장한 사이트에서 제거" : "저장한 사이트에 추가"}">
+              <button class="favorite-button ${isFavorite(service.name) ? "active" : ""}" type="button" data-favorite="${escapeHtml(service.name)}" aria-label="${escapeHtml(service.name)} 즐겨찾기" title="${isFavorite(service.name) ? "즐겨찾기에서 제거" : "즐겨찾기에 추가"}">
                 ${isFavorite(service.name) ? "★" : "☆"}
               </button>
             </div>
@@ -454,13 +471,13 @@ function render() {
   count.textContent = filtered.length;
   emptyState.hidden = filtered.length > 0;
   emptyState.textContent = showFavoritesOnly
-    ? "저장한 사이트가 없습니다."
+    ? "즐겨찾기한 사이트가 없습니다."
     : "선택한 조건에 맞는 서비스가 없습니다.";
 
   if (showFavoritesOnly && searchTerm) {
-    title.textContent = `저장한 사이트 검색: "${serviceSearch.value.trim()}"`;
+    title.textContent = `즐겨찾기 검색: "${serviceSearch.value.trim()}"`;
   } else if (showFavoritesOnly) {
-    title.textContent = "저장한 사이트";
+    title.textContent = "즐겨찾기";
   } else if (searchTerm) {
     title.textContent = `검색 결과: "${serviceSearch.value.trim()}"`;
   } else if (activeWorkflow === "전체" && activeSubcategory === "전체") {
@@ -474,6 +491,7 @@ function render() {
   }
 
   renderInsights();
+  renderSidebarCounts();
   bindCardActions();
 }
 

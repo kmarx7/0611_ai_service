@@ -180,7 +180,11 @@ h1 {
 }
 
 .side-item {
+  display: flex;
   min-height: 40px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
   padding: 0 12px;
   border-radius: 8px;
   text-align: left;
@@ -188,10 +192,29 @@ h1 {
   color: #334155;
 }
 
+.side-item span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.side-item strong {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+}
+
 .side-item.active {
   border-color: rgba(37, 99, 235, 0.28);
   background: rgba(37, 99, 235, 0.08);
   color: #1d4ed8;
+}
+
+.side-item.active strong,
+.favorite-filter.active strong {
+  color: currentColor;
 }
 
 .content {
