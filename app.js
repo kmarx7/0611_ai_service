@@ -30,8 +30,10 @@ const workflows = {
   "아이디어/리서치": {
     title: "아이디어와 리서치",
     match: (service) =>
-      ["AI 챗봇", "플랫폼/리서치", "생산성"].includes(service.category) ||
-      ["대화형 AI", "검색/리서치", "모델 허브"].includes(service.subcategory),
+      ["AI 챗봇", "플랫폼/리서치", "생산성", "교육/학습"].includes(service.category) ||
+      ["대화형 AI", "검색/리서치", "한국 AI 서비스", "모델 허브", "온라인 강의"].includes(
+        service.subcategory,
+      ),
   },
   "디자인/UX": {
     title: "디자인과 UX",
@@ -56,6 +58,7 @@ const workflows = {
         "AI 개발 플랫폼",
         "AI 코드 에디터",
         "AI 코딩 에이전트",
+        "개발자 커뮤니티",
         "API/테스트",
       ].includes(service.subcategory),
   },
